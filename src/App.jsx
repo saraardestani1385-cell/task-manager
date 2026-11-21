@@ -169,7 +169,7 @@ function App() {
       </section>
 
       <footer>
-        ساخته شده با ❤️ و React
+       ساخته شده با ❤️ و React | نسخه توسعه
       </footer>
     </main>
   )
