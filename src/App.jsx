@@ -50,6 +50,11 @@ function App() {
 
   const completedCount = tasks.filter((task) => task.completed).length
 
+  const progress =
+    tasks.length === 0
+      ? 0
+      : Math.round((completedCount / tasks.length) * 100)
+
   return (
     <main className="app" dir="rtl">
       <header className="header">
@@ -81,6 +86,20 @@ function App() {
         <div className="stat-card">
           <span>باقی‌مانده</span>
           <strong>{tasks.length - completedCount}</strong>
+        </div>
+      </section>
+
+      <section className="progress-section">
+        <div className="progress-info">
+          <span>پیشرفت امروز</span>
+          <strong>{progress}%</strong>
+        </div>
+
+        <div className="progress-bar">
+          <div
+            className="progress-fill"
+            style={{ width: `${progress}%` }}
+          ></div>
         </div>
       </section>
 

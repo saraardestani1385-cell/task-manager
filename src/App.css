@@ -76,7 +76,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .stat-card {
@@ -97,6 +97,49 @@ body {
   font-size: 28px;
   color: #6558e8;
 }
+
+/* Progress Section */
+
+.progress-section {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 20px #26334d08;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.progress-info span {
+  color: #8791a5;
+  font-weight: 600;
+}
+
+.progress-info strong {
+  color: #6558e8;
+  font-size: 18px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #eeeef7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #6558e8;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+/* Task Section */
 
 .task-section {
   background: white;
@@ -139,7 +182,14 @@ button {
   border: none;
   padding: 12px 20px;
   border-radius: 12px;
+  transition: background 0.2s;
 }
+
+.task-form button:hover {
+  background: #5143d0;
+}
+
+/* Filters */
 
 .filters {
   display: flex;
@@ -159,6 +209,8 @@ button {
   background: #6558e8;
   color: white;
 }
+
+/* Task List */
 
 .task-item {
   display: flex;
@@ -194,11 +246,17 @@ button {
   border-radius: 8px;
 }
 
+.delete:hover {
+  background: #ffe0e0;
+}
+
 .empty {
   text-align: center;
   color: #8791a5;
   padding: 25px;
 }
+
+/* Footer */
 
 footer {
   text-align: center;
@@ -206,6 +264,8 @@ footer {
   margin-top: 35px;
   font-size: 13px;
 }
+
+/* Responsive */
 
 @media (max-width: 600px) {
   .app {
@@ -230,6 +290,10 @@ footer {
 
   .stat-card strong {
     font-size: 22px;
+  }
+
+  .progress-section {
+    padding: 18px;
   }
 
   .task-section {
